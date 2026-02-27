@@ -192,6 +192,31 @@ jupyter notebook Tutorial.ipynb</code></pre>
     </li>
 </ol>
 
+
+<h3>Using Jetstream2</h3>
+<ol>
+    <li>Connect to your Jetstream2 instance via SSH.</li>
+    <li>Navigate to the tutorial directory and build the environment:
+      <pre><code>cd Materials
+./build_jetstream_environment.sh
+conda activate NSDF-Tutorial
+cd ..
+jupyter-ip.sh</code></pre>
+    </li>
+    <li>Open the provided Jupyter Lab URL in your browser.</li>
+    <li>In Jupyter Lab, select the <strong>NSDF-Tutorial</strong> kernel.</li>
+</ol>
+
+<h4>Accessing OpenVisuspy Dashboards</h4>
+<ol>
+    <li>From your local machine, create an SSH tunnel to forward the dashboard port:
+      <pre><code>ssh -L 8989:127.0.0.1:8989 &lt;Jetstream Native SSH&gt;</code></pre>
+    </li>
+    <li>After executing the corresponding cell in Jupyter open your browser and navigate to:
+      <pre><code>http://localhost:8989</code></pre>
+    </li>
+</ol>
+
 ## Community and Resources:
 
 NSDF and SOMOSPIE are open-source projects. Questions, discussions, and contributions are welcome. Contributions can include new packages, bug fixes, documentation, or even new core features.
