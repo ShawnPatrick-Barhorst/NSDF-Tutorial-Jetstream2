@@ -197,7 +197,7 @@ jupyter notebook Tutorial.ipynb</code></pre>
 <ol>
     <li>Connect to your Jetstream2 instance via SSH.</li>
     <li>Navigate to the tutorial directory and build the environment:
-      <pre><code>cd Materials
+      <pre><code>cd hands-on/session\ II/Materials/
 ./build_jetstream_environment.sh
 conda activate NSDF-Tutorial
 cd ..
