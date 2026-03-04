@@ -134,9 +134,14 @@ docker-compose up -d</code></pre>
 
   <li>Connect to your Jetstream2 instance via SSH.</li>
 
+<li>
+  Clone the tutorial repository:
+  <pre><code>git clone https://github.com/TauferLab/NSDF-Tutorial-2025.git</code></pre>
+</li>
+
   <li>
     Navigate to the session materials directory and build the environment:
-    <pre><code>cd hands-on/session\ II/Materials/
+    <pre><code>cd NSDF-Tutorial-2025/hands-on/session\ II/Materials/
 module load miniforge
 ./build_jetstream_environment.sh</code></pre>
   </li>
