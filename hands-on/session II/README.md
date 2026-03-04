@@ -118,6 +118,73 @@ docker-compose up -d</code></pre>
     </li>
   </ol>
 
+## Option3: Jetstream2
+<p><strong>Requirements:</strong> Access to a Jetstream2 instance via SSH.</p>
+
+<h4>Initial Setup (First Time Only)</h4>
+<ol>
+  <li>
+    If you do not already have a Jetstream2 instance, follow the
+    <a href="Materials/jetstream2_manual.pdf" target="_blank">
+    Jetstream2 Setup Manual
+    </a>
+    to create and connect to one.
+  </li>
+
+  <li>Connect to your Jetstream2 instance via SSH.</li>
+
+  <li>
+    Navigate to the session materials directory and build the environment:
+    <pre><code>cd hands-on/session\ II/Materials/
+module load miniforge
+./build_jetstream_environment.sh</code></pre>
+  </li>
+
+  <li>
+    Activate the environment and start Jupyter Lab:
+    <pre><code>conda activate NSDF-Tutorial
+cd ..
+jupyter-ip.sh</code></pre>
+  </li>
+
+  <li>Open the Jupyter Lab URL printed in the terminal in your web browser.</li>
+
+  <li>
+    In Jupyter Lab, select the kernel named
+    <strong>NSDF-Tutorial</strong>.
+  </li>
+</ol>
+
+<h4>Starting the Environment (After Installation)</h4>
+<ol>
+  <li>
+    Load Conda and activate the environment:
+    <pre><code>module load miniforge
+conda activate NSDF-Tutorial</code></pre>
+  </li>
+
+  <li>
+    Navigate to the tutorial directory and start Jupyter:
+    <pre><code>cd hands-on/session\ II
+jupyter-ip.sh</code></pre>
+  </li>
+
+  <li>Open the Jupyter Lab URL printed in the terminal in your browser.</li>
+</ol>
+
+<h4>Accessing OpenVisuspy Dashboards</h4>
+<ol>
+  <li>
+    From your local machine, create an SSH tunnel to forward the dashboard port:
+    <pre><code>ssh -L 8989:127.0.0.1:8989 &lt;Jetstream Native SSH&gt;</code></pre>
+  </li>
+
+  <li>
+    After executing the corresponding dashboard cell in Jupyter, open your browser and navigate to:
+    <pre><code>http://localhost:8989</code></pre>
+  </li>
+</ol>
+
 
 ## APPENDIX: Prerequisites
 
