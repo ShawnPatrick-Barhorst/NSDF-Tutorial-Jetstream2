@@ -169,7 +169,7 @@ python -m pip install -e "$OPENVISUSPY_DIR" >/dev/null
 step "7/7" "Install Jupyter kernel + extras"
 
 # keep these visible enough to diagnose, but not too noisy
-conda install -c conda-forge -y jupyterlab-git >/dev/null
+conda install -c conda-forge -y jupyterlab-git=0.52.0 >/dev/null
 
 python -m pip install "ipykernel==6.29.2" >/dev/null
 python -m pip install jupyter-server-mathjax >/dev/null
