@@ -118,7 +118,7 @@ docker-compose up -d</code></pre>
     </li>
   </ol>
 
-## Option3: Jetstream2
+## Option 3: Jetstream2
 <p><strong>Requirements:</strong> Access to a Jetstream2 instance via SSH.</p>
 
 <h4>Initial Setup (First Time Only)</h4>
