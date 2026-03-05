@@ -147,9 +147,8 @@ module load miniforge
   </li>
 
   <li>
-    Activate the environment and start Jupyter Lab:
-    <pre><code>conda activate NSDF-Tutorial
-cd ..
+    Start Jupyter Lab:
+    <pre><code>cd ..
 jupyter-ip.sh</code></pre>
   </li>
 
@@ -164,9 +163,9 @@ jupyter-ip.sh</code></pre>
 <h4>Starting the Environment (After Installation)</h4>
 <ol>
   <li>
-    Load Conda and activate the environment:
+    Load Conda:
     <pre><code>module load miniforge
-conda activate NSDF-Tutorial</code></pre>
+</code></pre>
   </li>
 
   <li>

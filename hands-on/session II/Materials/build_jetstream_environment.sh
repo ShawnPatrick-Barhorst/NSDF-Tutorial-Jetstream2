@@ -169,14 +169,16 @@ python -m pip install -e "$OPENVISUSPY_DIR" >/dev/null
 step "7/7" "Install Jupyter kernel + extras"
 
 # keep these visible enough to diagnose, but not too noisy
-conda install -c conda-forge -y jupyterlab-git=0.52.0 >/dev/null
-
-python -m pip install "ipykernel==6.29.2" >/dev/null
-python -m pip install jupyter-server-mathjax >/dev/null
+ENV_BIN_DIR="$CONDA_PREFIX/bin"
 
 python -m ipykernel install --user \
   --name "$KERNEL_NAME" \
-  --display-name "$KERNEL_DISPLAY" >/dev/null
+  --display-name "$KERNEL_DISPLAY" \
+  --env PATH "$ENV_BIN_DIR:$OPENVISUSPY_SRC:$PATH" \
+  --env LD_LIBRARY_PATH "$CONDA_PREFIX/lib:$CONDA_PREFIX/lib/gdalplugins" \
+  --env PROJ_LIB "$CONDA_PREFIX/share/proj" \
+  --env GDAL_DATA "$CONDA_PREFIX/share/gdal" \
+  --env PROJ_NETWORK "ON" 
 
 print_separated_message \
   "DONE" \
